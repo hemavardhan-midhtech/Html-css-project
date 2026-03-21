@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        header {
+            text-align: center;
+        }
+         nav ul {
+            list-style-type:circle;
+            padding: 10px;
+        }
+
+        img {
+            align-items: center;
+            width: 100px;
+            height: 150px;
+            border-radius: 250px; 
+            margin-left: 300px;
+        }
+        button {
+                padding: 10px 20px;
+                background:#030303;
+                color: rgb(255, 255, 255);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        button:hover {
+                background-color: #764ba2;
+            }
+            body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #ffffff 0%, #764ba2 100%);
+        }
+        footer {
+                 background: linear-gradient(#0e0000 100%);
+                color: white;
+                text-align: center;
+                padding: 1px 0;
+            }
+            .geid {
+                    display: grid;
+                    grid-template-columns: auto auto auto auto auto auto;
+                    gap: 20px;
+                }
+             h2 {
+                    color: #060600;
+                    text-align: center;
+                 }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <dl class="geid">
+                <dt><button onclick="window.location.href='login.html'">LogOut</button></dt>
+                <dt><button onclick="window.location.href='index.html'">Home</button></dt>
+                <dt><button onclick="window.location.href='about.html'">About</button></dt>
+                <dt><button onclick="window.location.href='contact.html'">Contact</button></dt>
+                <dt><button onclick="window.location.href='Skills.html'">Skills</button></dt>
+            </dl>
+        </nav> 
+    </header>
+    <main>
+        <img src="images/photo_2024-08-13_15-13-43.jpg" alt="my Image">
+    <h2>This is the About Me page for Hema Vadhan.</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatem architecto, eius nihil aliquid earum perferendis facilis quae debitis iusto! Consectetur nisi ex cupiditate unde facilis, neque ut esse placeat!</p>
+    <h2>get more information</h2>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum cum fugit sapiente, et quia error ducimus quidem ea enim, odio quis est debitis eos earum nobis ut, aliquid incidunt amet.</p>
+    <h2 id="contact me">Contact Me</h2>
+    <p>You can reach me at <a href="mailto:hemavardhanvelaga@gmail.com">hema.vadhan@example.com</a></p>
+    <button onclick="window.location.href='contact.html'">Contact Me</button>
+    <a href="index.html">
+        <button>Back to Home</button>
+    </a>
+    </main>
+    <br></br>
+    <footer>
+        <p>&copy; 2024 Hema Vadhan. All rights reserved.</p>    
+    </footer>
+</body>
+</html>

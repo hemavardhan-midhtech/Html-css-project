@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills</title>
+    <style>
+        header {
+            background-color: #00060a #f9fafb;
+            text-align: center;
+        }
+         nav ul {
+            list-style-type:circle;
+            padding: 10px;
+        }
+
+        img {
+            width: 100px;
+            height: 150px;
+            border-radius: 150px; 
+            margin-left: 300px;
+        }
+        button {
+                padding: 10px 20px;
+                background:#030303;
+                color: rgb(255, 255, 255);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        button:hover {
+                background-color: #764ba2;
+            }
+         body {
+                font-family: Arial, sans-serif;
+                background: linear-gradient(135deg, #ffffff 0%, #764ba2 100%);
+                background-size: cover ;
+                margin: 0;
+                padding: 20px;
+            
+            } 
+            .geid {
+                    display: grid;
+                    grid-template-columns: auto auto auto auto auto auto;
+                    gap: 20px;
+                }
+        footer {
+                 background: linear-gradient(135deg, #d394f757 );
+                color: white;
+                text-align: center;
+                padding: 10px 0;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <dl class="geid">
+                <dt><button onclick="window.location.href='login.html'">LogOut</button></dt>
+                <dt><button onclick="window.location.href='index.html'">Home</button></dt>
+                <dt><button onclick="window.location.href='about.html'">About</button></dt>
+                <dt><button onclick="window.location.href='contact.html'">Contact</button></dt>
+                <dt><button onclick="window.location.href='Skills.html'">Skills</button></dt>
+            </dl>
+        </nav>
+    </header>
+    <main>
+    <h1>My Skills</h1>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Java</li>
+    </ul>
+    <a href="index.html">
+        <button>Back to Home</button>
+    </a>
+    </main>
+    <br>  </br>  
+    <footer>
+        <p>&copy; Velaga Hema Vadhan. All rights reserved.</p>    
+    </footer>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en"> 
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <meta keywords="HTML, CSS">
+        <meta description="This is a simple HTML page.">    
+        <title>My Website</title>
+        <style>
+        header {
+            text-align: center;
+        }
+         nav ul {
+            list-style-type:circle;
+            padding: 10px;
+        }
+        img {
+            align-items: auto;
+            width:10%;
+            height: auto;
+        }
+        p{
+            font-weight: bolder;
+        }
+        .username {
+            font-size: 18px;
+            color: #f70707;
+            margin-top: 10px;
+            text-align: center;
+        }
+            button {
+                padding: 10px 20px;
+                background:#030303;
+                color: rgb(255, 255, 255);
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+        button:hover {
+                background-color: #764ba2;
+            }
+            footer {
+                background-color: #00060a;
+                color: white;
+                text-align: center;
+                padding: 1px;
+            }
+            h1.welcome {
+                font-size: 24px;
+                color: #040000;
+                text-align: center;
+            }
+                h2 {
+                    color: #050500;
+                    text-align: center;
+                }
+                ul {
+                    list-style-type: square;
+                    padding-left: 20px;
+                }
+            body {
+                font-family: Arial, sans-serif;
+                background: linear-gradient(135deg, #ffffff 0%, #764ba2 100%);
+                background-size: cover ;
+                margin: 0;
+                padding: 20px;
+            
+            } 
+            .geid {
+                    display: grid;
+                    grid-template-columns: auto auto auto auto auto auto;
+                    gap: 1px;
+                }
+            .B {
+                display: grid;
+                    grid-template-columns: auto auto auto auto auto auto;
+                    gap: 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+            <dl class="geid">
+                <dt><button onclick="window.location.href='login.html'">LogOut</button></dt>
+                <dt><button onclick="window.location.href='index.html'">Home</button></dt>
+                <dt><button onclick="window.location.href='about.html'">About</button></dt>
+                <dt><button onclick="window.location.href='contact.html'">Contact</button></dt>
+                <dt><button onclick="window.location.href='Skills.html'">Skills</button></dt>
+            </dl>
+            </nav>
+        </header>
+        <main>
+            <h1 class="welcome">Welcome to My Website page</h1>
+            <img src="images/photo_2024-08-13_15-13-43.jpg" alt="my Image">
+            <p style="text-align: center;font-size: 50px;">This is a simple HTML page.</p>
+        <h2>About Me</h2>
+            <p>My name is Hema Vadhan, and I am a passionate web developer. I enjoy creating beautiful and functional websites that provide a great user experience. In my free time, I like to explore new technologies and improve my coding skills.</p>
+            <button onclick="window.location.href='about.html'" class="B">Know me</button>
+        <h2>Contact Me</h2>
+            <p>You can reach me at:</p>
+            <ul>
+                <li>Email:hemavardhanvelaga@gmail.com</li>
+                <li>Phone:9393844666</li>
+                <li>GitHub: https://github.com/HemaVadhan</li>
+                <li>LinkedIn: https://www.linkedin.com/in/hema-vadhan-702082254</li>
+            </ul>
+            <a href="contact.html">
+                <button class="B">Contact Me</button>
+            </a>
+        <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+            </ul>
+             <a href="Skills.html">
+                <button class="B">Skills</button>
+            </a>
+        </main> 
+        <br></br>
+        <footer>
+            <p>&copy; 2024 Hema Vadhan. All rights reserved.</p> 
+        </footer>
+    </body>
+</html>  
