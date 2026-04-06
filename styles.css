@@ -10,6 +10,40 @@
     --accent-soft: rgba(213, 111, 62, 0.14);
     --stroke: rgba(31, 41, 51, 0.1);
     --shadow: 0 18px 50px rgba(49, 61, 73, 0.14);
+    --nav-bg: rgba(255, 255, 255, 0.42);
+    --nav-border: rgba(255, 255, 255, 0.45);
+    --footer-bg: rgba(31, 41, 51, 0.92);
+    --overlay-bg: rgba(31, 41, 51, 0.78);
+    --overlay-text: rgba(255, 255, 255, 0.86);
+    --input-bg: rgba(255, 255, 255, 0.84);
+    --chip-bg: rgba(255, 255, 255, 0.72);
+    --card-bg: rgba(255, 255, 255, 0.68);
+    --contact-bg: rgba(255, 255, 255, 0.66);
+    --quote-bg: linear-gradient(160deg, rgba(31, 41, 51, 0.94), rgba(87, 59, 34, 0.92));
+}
+
+body[data-theme="dark"] {
+    --bg-top: #0f1720;
+    --bg-bottom: #162938;
+    --panel: rgba(15, 23, 32, 0.82);
+    --panel-strong: rgba(22, 41, 56, 0.94);
+    --text-main: #eef4f8;
+    --text-soft: #a9bcc8;
+    --accent: #ff9f5c;
+    --accent-dark: #ffbc85;
+    --accent-soft: rgba(255, 159, 92, 0.14);
+    --stroke: rgba(255, 255, 255, 0.08);
+    --shadow: 0 18px 50px rgba(0, 0, 0, 0.32);
+    --nav-bg: rgba(9, 16, 24, 0.62);
+    --nav-border: rgba(255, 255, 255, 0.08);
+    --footer-bg: rgba(8, 14, 20, 0.94);
+    --overlay-bg: rgba(6, 10, 16, 0.82);
+    --overlay-text: rgba(255, 255, 255, 0.88);
+    --input-bg: rgba(20, 33, 46, 0.9);
+    --chip-bg: rgba(18, 30, 42, 0.9);
+    --card-bg: rgba(17, 28, 39, 0.82);
+    --contact-bg: rgba(17, 28, 39, 0.82);
+    --quote-bg: linear-gradient(160deg, rgba(4, 10, 16, 0.96), rgba(31, 55, 76, 0.94));
 }
 
 * {
@@ -98,15 +132,53 @@ body::after {
     padding: 14px;
     margin: 0;
     list-style: none;
-    border: 1px solid rgba(255, 255, 255, 0.45);
+    border: 1px solid var(--nav-border);
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.42);
+    background: var(--nav-bg);
     backdrop-filter: blur(14px);
     box-shadow: 0 10px 25px rgba(31, 41, 51, 0.08);
 }
 
 .nav-list .push-right {
     margin-left: auto;
+}
+
+.nav-list .push-right + .push-right {
+    margin-left: 0;
+}
+
+.nav-dropdown {
+    position: relative;
+}
+
+.menu-toggle {
+    min-width: 118px;
+}
+
+.menu-panel {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    min-width: 190px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid var(--nav-border);
+    background: var(--nav-bg);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 18px 40px rgba(31, 41, 51, 0.14);
+    display: none;
+    z-index: 10;
+}
+
+.nav-dropdown.is-open .menu-panel {
+    display: grid;
+    gap: 8px;
+}
+
+.menu-item {
+    width: 100%;
+    justify-content: flex-start;
+    text-align: left;
 }
 
 @media (max-width: 640px) {
@@ -468,7 +540,7 @@ body::after {
 .logo-card {
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.55);
-    background: rgba(255, 255, 255, 0.68);
+    background: var(--card-bg);
     box-shadow: var(--shadow);
 }
 
@@ -552,7 +624,7 @@ body::after {
     inset: auto 18px 18px 18px;
     padding: 16px 18px;
     border-radius: 20px;
-    background: rgba(31, 41, 51, 0.78);
+    background: var(--overlay-bg);
     color: #ffffff;
     backdrop-filter: blur(10px);
 }
@@ -564,7 +636,7 @@ body::after {
 
 .media-overlay p {
     margin: 0;
-    color: rgba(255, 255, 255, 0.86);
+    color: var(--overlay-text);
 }
 
 .logo-ribbon {
@@ -580,7 +652,7 @@ body::after {
     gap: 10px;
     padding: 10px 14px;
     border-radius: 999px;
-    background: rgba(255, 255, 255, 0.72);
+    background: var(--chip-bg);
     border: 1px solid var(--stroke);
     box-shadow: 0 10px 20px rgba(49, 61, 73, 0.08);
     font-weight: 600;
@@ -673,7 +745,7 @@ body::after {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background: linear-gradient(160deg, rgba(31, 41, 51, 0.94), rgba(87, 59, 34, 0.92));
+    background: var(--quote-bg);
     color: #ffffff;
 }
 
@@ -698,7 +770,7 @@ body::after {
 .contact-blurb {
     padding: 24px;
     border-radius: 24px;
-    background: rgba(255, 255, 255, 0.66);
+    background: var(--contact-bg);
     border: 1px solid var(--stroke);
 }
 
@@ -753,7 +825,7 @@ body::after {
     gap: 16px;
     padding: 16px 18px;
     border-radius: 18px;
-    background: rgba(255, 255, 255, 0.7);
+    background: var(--card-bg);
     border: 1px solid var(--stroke);
 }
 
@@ -766,7 +838,7 @@ body::after {
     margin: 24px auto 0;
     padding: 18px 20px;
     border-radius: 24px 24px 0 0;
-    background: rgba(31, 41, 51, 0.92);
+    background: var(--footer-bg);
     color: #ffffff;
     text-align: center;
 }
@@ -798,7 +870,7 @@ body::after {
     display: block;
     margin-bottom: 8px;
     font-weight: 700;
-    color: #10212f;
+    color: var(--text-main);
 }
 
 .form-group input {
@@ -807,7 +879,8 @@ body::after {
     border: 1px solid rgba(16, 33, 47, 0.18);
     border-radius: 14px;
     font: inherit;
-    background: rgba(255, 255, 255, 0.84);
+    background: var(--input-bg);
+    color: var(--text-main);
     transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -821,7 +894,7 @@ body::after {
 .helper-text {
     margin-top: 18px;
     text-align: center;
-    color: #10212f;
+    color: var(--text-main);
 }
 
 .helper-text a,
@@ -840,6 +913,35 @@ body::after {
 .reveal.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+.theme-toggle {
+    min-width: 124px;
+}
+
+body[data-theme="dark"] .btn {
+    background: #f1f5f8;
+    color: #101922;
+}
+
+body[data-theme="dark"] .btn:hover,
+body[data-theme="dark"] .btn:focus-visible {
+    background: var(--accent);
+    color: #101922;
+}
+
+body[data-theme="dark"] .btn-secondary {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-main);
+}
+
+body[data-theme="dark"] .showcase-card strong,
+body[data-theme="dark"] .project-card strong,
+body[data-theme="dark"] .timeline-card strong,
+body[data-theme="dark"] .logo-card strong,
+body[data-theme="dark"] .contact-blurb h3,
+body[data-theme="dark"] .contact-item strong {
+    color: var(--text-main);
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -910,6 +1012,12 @@ body::after {
 
     .btn {
         width: 100%;
+    }
+
+    .menu-panel {
+        position: static;
+        min-width: 100%;
+        margin-top: 10px;
     }
 
     .floating-badge.bottom {
