@@ -435,15 +435,24 @@ body::after {
 .timeline,
 .gallery-grid,
 .project-grid,
-.spotlight-grid {
+.spotlight-grid,
+.logo-grid {
     display: grid;
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.media-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 18px;
     margin-top: 22px;
 }
 
 .showcase-grid,
 .gallery-grid,
-.project-grid {
+.project-grid,
+.logo-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
@@ -455,7 +464,8 @@ body::after {
 .project-card,
 .timeline-card,
 .gallery-card,
-.quote-card {
+.quote-card,
+.logo-card {
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.55);
     background: rgba(255, 255, 255, 0.68);
@@ -465,8 +475,142 @@ body::after {
 .showcase-card,
 .project-card,
 .timeline-card,
-.quote-card {
+.quote-card,
+.logo-card {
     padding: 22px;
+}
+
+.logo-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 220px;
+}
+
+.logo-mark {
+    width: 88px;
+    height: 88px;
+    display: grid;
+    place-items: center;
+    border-radius: 24px;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    box-shadow: 0 16px 32px rgba(49, 61, 73, 0.18);
+}
+
+.logo-mark.azure {
+    background: linear-gradient(160deg, #007fff, #0047ab);
+}
+
+.logo-mark.tensorflow {
+    background: linear-gradient(160deg, #ff9f1c, #f15a24);
+}
+
+.logo-mark.ai {
+    background: linear-gradient(160deg, #1f2933, #5d3290);
+}
+
+.logo-card strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.05rem;
+}
+
+.logo-card p {
+    color: var(--text-soft);
+}
+
+.media-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+    border-radius: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    box-shadow: var(--shadow);
+    background: rgba(255, 255, 255, 0.68);
+}
+
+.media-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.media-card:hover img {
+    transform: scale(1.05);
+}
+
+.media-overlay {
+    position: absolute;
+    inset: auto 18px 18px 18px;
+    padding: 16px 18px;
+    border-radius: 20px;
+    background: rgba(31, 41, 51, 0.78);
+    color: #ffffff;
+    backdrop-filter: blur(10px);
+}
+
+.media-overlay strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.media-overlay p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.logo-ribbon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.logo-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid var(--stroke);
+    box-shadow: 0 10px 20px rgba(49, 61, 73, 0.08);
+    font-weight: 600;
+}
+
+.logo-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    color: #ffffff;
+    font-size: 0.82rem;
+    font-weight: 800;
+}
+
+.logo-dot.azure {
+    background: linear-gradient(160deg, #007fff, #0047ab);
+}
+
+.logo-dot.tensorflow {
+    background: linear-gradient(160deg, #ff9f1c, #f15a24);
+}
+
+.logo-dot.ai {
+    background: linear-gradient(160deg, #1f2933, #5d3290);
+}
+
+.logo-dot.devops {
+    background: linear-gradient(160deg, #0f9d58, #0b5d36);
 }
 
 .showcase-card strong,
@@ -717,6 +861,8 @@ body::after {
     .showcase-grid,
     .gallery-grid,
     .project-grid,
+    .logo-grid,
+    .media-grid,
     .timeline,
     .spotlight-grid,
     .contact-panel {
