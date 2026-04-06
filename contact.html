@@ -4,78 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <style>
-        header {
-            background-color: #00060a #f4f3f6;
-            text-align: center;
-        }
-         nav ul {
-            list-style-type:circle;
-        }
-        button {
-                padding: 10px 20px;
-                background:#030303;
-                color: rgb(255, 255, 255);
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-        button:hover {
-                background-color: #764ba2;
-            }
-        footer {
-                background-color: #00060a;
-                color: white;
-                text-align: center;
-                padding: 10px 0;
-            }
-        .geid {
-                    display: grid;
-                    grid-template-columns: auto auto auto auto auto auto;
-                    gap: 20px;
-                }
-         h1 {
-            color: #030300;
-            text-align: center;
-        }
-          body {
-                font-family: Arial, sans-serif;
-                background: linear-gradient(135deg, #ffffff 0%, #764ba2 100%);
-                background-size: cover ;
-                margin: 0;
-                padding: 20px;
-            
-            } 
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <dl class="geid">
-                <dt><button onclick="window.location.href='login.html'">LogOut</button></dt>
-                <dt><button onclick="window.location.href='index.html'">Home</button></dt>
-                <dt><button onclick="window.location.href='about.html'">About</button></dt>
-                <dt><button onclick="window.location.href='contact.html'">Contact</button></dt>
-                <dt><button onclick="window.location.href='Skills.html'">Skills</button></dt>
-            </dl>
-        </nav>
-    </header> 
-    <main>  
-    <h1>Contact Me</h1>
-    <p>You can reach me at:</p>
-    <ul>
-        <li>Email: hemavardhanvelaga@gmail.com</li>
-        <li>Phone: 9393844666</li>
-        <li>GitHub: https://github.com/HemaVadhan</li>
-        <li>LinkedIn: https://www.linkedin.com/in/hema-vadhan-702082254</li>
-    </ul>   
-    <a href="index.html">
-        <button>Back to Home</button>
-    </a>
-    </main>
-    <br></br> 
-    <footer>
+<body class="site-body">
+    <div class="page-shell">
+        <header class="site-header">
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a class="btn nav-link" href="login.html">Log Out</a></li>
+                    <li><a class="btn nav-link" href="index.html">Home</a></li>
+                    <li><a class="btn nav-link" href="about.html">About</a></li>
+                    <li><a class="btn nav-link" href="contact.html">Contact</a></li>
+                    <li><a class="btn nav-link" href="Skills.html">Skills</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="content-card reveal">
+                <h1>Contact Me</h1>
+                <p class="section-intro">You can reach me through any of these platforms. I'd be happy to connect and talk about projects, learning, or opportunities.</p>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <div>
+                            <strong>Email</strong>
+                            <span>Best for project or professional contact</span>
+                        </div>
+                        <a href="mailto:hemavardhanvelaga@gmail.com">hemavardhanvelaga@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <div>
+                            <strong>Phone</strong>
+                            <span>Direct contact for quick communication</span>
+                        </div>
+                        <a href="tel:9393844666">9393844666</a>
+                    </div>
+                    <div class="contact-item">
+                        <div>
+                            <strong>GitHub</strong>
+                            <span>See my code and project work</span>
+                        </div>
+                        <a href="https://github.com/HemaVadhan">github.com/HemaVadhan</a>
+                    </div>
+                    <div class="contact-item">
+                        <div>
+                            <strong>LinkedIn</strong>
+                            <span>Connect with me professionally</span>
+                        </div>
+                        <a href="https://www.linkedin.com/in/hema-vadhan-702082254">linkedin.com/in/hema-vadhan-702082254</a>
+                    </div>
+                </div>
+                <div class="actions">
+                    <a class="btn" href="index.html">Back to Home</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="site-footer">
         <p>&copy; 2024 Hema Vadhan. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>

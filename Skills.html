@@ -4,82 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Skills</title>
-    <style>
-        header {
-            background-color: #00060a #f9fafb;
-            text-align: center;
-        }
-         nav ul {
-            list-style-type:circle;
-            padding: 10px;
-        }
-
-        img {
-            width: 100px;
-            height: 150px;
-            border-radius: 150px; 
-            margin-left: 300px;
-        }
-        button {
-                padding: 10px 20px;
-                background:#030303;
-                color: rgb(255, 255, 255);
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-            }
-        button:hover {
-                background-color: #764ba2;
-            }
-         body {
-                font-family: Arial, sans-serif;
-                background: linear-gradient(135deg, #ffffff 0%, #764ba2 100%);
-                background-size: cover ;
-                margin: 0;
-                padding: 20px;
-            
-            } 
-            .geid {
-                    display: grid;
-                    grid-template-columns: auto auto auto auto auto auto;
-                    gap: 20px;
-                }
-        footer {
-                 background: linear-gradient(135deg, #d394f757 );
-                color: white;
-                text-align: center;
-                padding: 10px 0;
-            }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <nav>
-            <dl class="geid">
-                <dt><button onclick="window.location.href='login.html'">LogOut</button></dt>
-                <dt><button onclick="window.location.href='index.html'">Home</button></dt>
-                <dt><button onclick="window.location.href='about.html'">About</button></dt>
-                <dt><button onclick="window.location.href='contact.html'">Contact</button></dt>
-                <dt><button onclick="window.location.href='Skills.html'">Skills</button></dt>
-            </dl>
-        </nav>
-    </header>
-    <main>
-    <h1>My Skills</h1>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Python</li>
-        <li>Java</li>
-    </ul>
-    <a href="index.html">
-        <button>Back to Home</button>
-    </a>
-    </main>
-    <br>  </br>  
-    <footer>
-        <p>&copy; Velaga Hema Vadhan. All rights reserved.</p>    
+<body class="site-body">
+    <div class="page-shell">
+        <header class="site-header">
+            <nav aria-label="Main navigation">
+                <ul class="nav-list">
+                    <li><a class="btn nav-link" href="login.html">Log Out</a></li>
+                    <li><a class="btn nav-link" href="index.html">Home</a></li>
+                    <li><a class="btn nav-link" href="about.html">About</a></li>
+                    <li><a class="btn nav-link" href="contact.html">Contact</a></li>
+                    <li><a class="btn nav-link" href="Skills.html">Skills</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="content-card reveal">
+                <h1>My Skills</h1>
+                <p class="section-intro">These are the technologies I'm learning and using to build web projects with stronger structure, style, and interactivity.</p>
+                <div class="feature-grid">
+                    <article class="feature-card">
+                        <strong>Front-End</strong>
+                        <ul class="skills-list">
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </article>
+                    <article class="feature-card">
+                        <strong>Programming</strong>
+                        <ul class="skills-list">
+                            <li>Python</li>
+                            <li>Java</li>
+                            <li>React</li>
+                        </ul>
+                    </article>
+                </div>
+                <div class="actions">
+                    <a class="btn" href="index.html">Back to Home</a>
+                </div>
+            </section>
+        </main>
+    </div>
+    <footer class="site-footer">
+        <p>&copy; Velaga Hema Vadhan. All rights reserved.</p>
     </footer>
+    <script src="script.js"></script>
 </body>
 </html>
