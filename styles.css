@@ -94,7 +94,6 @@ body::after {
 .nav-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
     gap: 12px;
     padding: 14px;
     margin: 0;
@@ -104,6 +103,16 @@ body::after {
     background: rgba(255, 255, 255, 0.42);
     backdrop-filter: blur(14px);
     box-shadow: 0 10px 25px rgba(31, 41, 51, 0.08);
+}
+
+.nav-list .push-right {
+    margin-left: auto;
+}
+
+@media (max-width: 640px) {
+    .nav-list .push-right {
+        margin-left: 0;
+    }
 }
 
 .btn {
@@ -209,6 +218,12 @@ body::after {
     font-weight: 700;
 }
 
+.hero-note {
+    margin-top: 16px;
+    color: var(--text-soft);
+    max-width: 52ch;
+}
+
 .actions {
     display: flex;
     flex-wrap: wrap;
@@ -282,6 +297,61 @@ body::after {
     object-position: center top;
 }
 
+.about-hero {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 28px;
+    align-items: center;
+}
+
+.about-photo-frame {
+    position: relative;
+    width: 220px;
+    height: 280px;
+    padding: 10px;
+    border-radius: 32px;
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.95), rgba(213, 111, 62, 0.24));
+    box-shadow: 0 18px 36px rgba(49, 61, 73, 0.18);
+}
+
+.about-photo-frame::before {
+    content: "";
+    position: absolute;
+    inset: -10px auto auto -10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 24px;
+    background: rgba(213, 111, 62, 0.14);
+    z-index: 0;
+}
+
+.about-photo-frame::after {
+    content: "";
+    position: absolute;
+    right: -14px;
+    bottom: -14px;
+    width: 92px;
+    height: 92px;
+    border-radius: 28px;
+    background: rgba(31, 41, 51, 0.08);
+    z-index: 0;
+}
+
+.about-photo {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 24px;
+    display: block;
+}
+
+.about-intro h1 {
+    margin-bottom: 12px;
+}
+
 .floating-badge {
     position: absolute;
     padding: 12px 16px;
@@ -312,9 +382,31 @@ body::after {
     max-width: 62ch;
 }
 
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 16px;
+}
+
 .feature-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     margin-top: 22px;
+}
+
+.feature-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::after {
+    content: "";
+    position: absolute;
+    inset: auto -30px -30px auto;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(213, 111, 62, 0.08);
 }
 
 .feature-card ul,
@@ -337,6 +429,171 @@ body::after {
     background: rgba(255, 255, 255, 0.7);
     border: 1px solid var(--stroke);
     font-weight: 600;
+}
+
+.showcase-grid,
+.timeline,
+.gallery-grid,
+.project-grid,
+.spotlight-grid {
+    display: grid;
+    gap: 18px;
+    margin-top: 22px;
+}
+
+.showcase-grid,
+.gallery-grid,
+.project-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.spotlight-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+}
+
+.showcase-card,
+.project-card,
+.timeline-card,
+.gallery-card,
+.quote-card {
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.68);
+    box-shadow: var(--shadow);
+}
+
+.showcase-card,
+.project-card,
+.timeline-card,
+.quote-card {
+    padding: 22px;
+}
+
+.showcase-card strong,
+.project-card strong,
+.timeline-card strong {
+    display: block;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.project-card p,
+.showcase-card p,
+.timeline-card p,
+.quote-card p {
+    color: var(--text-soft);
+}
+
+.project-card {
+    position: relative;
+}
+
+.project-tag,
+.timeline-tag {
+    display: inline-block;
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent-dark);
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.timeline-card {
+    min-height: 100%;
+}
+
+.gallery-card {
+    overflow: hidden;
+    min-height: 280px;
+}
+
+.gallery-card img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.06);
+}
+
+.quote-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(160deg, rgba(31, 41, 51, 0.94), rgba(87, 59, 34, 0.92));
+    color: #ffffff;
+}
+
+.quote-card p,
+.quote-card small {
+    color: rgba(255, 255, 255, 0.86);
+}
+
+.big-number {
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    line-height: 1;
+    margin: 0 0 12px;
+}
+
+.contact-panel {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.contact-blurb {
+    padding: 24px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.66);
+    border: 1px solid var(--stroke);
+}
+
+.contact-blurb h3 {
+    margin-top: 0;
+}
+
+.contact-blurb p,
+.contact-blurb li {
+    color: var(--text-soft);
+}
+
+.mini-list {
+    padding-left: 18px;
+}
+
+.hover-lift {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.hover-lift::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at var(--mx, 50%) var(--my, 50%), rgba(255, 255, 255, 0.4), transparent 42%);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.25s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 22px 42px rgba(49, 61, 73, 0.18);
+}
+
+.hover-lift:hover::before {
+    opacity: 1;
 }
 
 .contact-list {
@@ -455,12 +712,23 @@ body::after {
 
 @media (max-width: 900px) {
     .hero-grid,
-    .feature-grid {
+    .about-hero,
+    .feature-grid,
+    .showcase-grid,
+    .gallery-grid,
+    .project-grid,
+    .timeline,
+    .spotlight-grid,
+    .contact-panel {
         grid-template-columns: 1fr;
     }
 
     .hero-visual {
         min-height: auto;
+    }
+
+    .about-photo-frame {
+        margin: 0 auto;
     }
 
     .stats-grid {
@@ -488,7 +756,8 @@ body::after {
     }
 
     .actions,
-    .contact-item {
+    .contact-item,
+    .section-heading {
         flex-direction: column;
         align-items: flex-start;
     }
