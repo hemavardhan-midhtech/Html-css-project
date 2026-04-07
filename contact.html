@@ -16,6 +16,7 @@
                     <li><a class="btn nav-link" href="contact.html">Contact</a></li>
                     <li><a class="btn nav-link" href="Skills.html">Skills</a></li>
                     <li><a class="btn nav-link" href="Certifications.html">Certifications</a></li>
+                    <li><a class="btn nav-link" href="Experience.html">Experience</a></li>
                     <li><a class="btn nav-link" href="Projects.html">Projects</a></li>
                     <li class="push-right nav-dropdown">
                         <button class="btn menu-toggle" type="button" data-menu-toggle aria-expanded="false">Menu</button>
@@ -29,36 +30,79 @@
         </header>
         <main>
             <section class="content-card reveal">
-                <h1>Contact Me</h1>
-                <p class="section-intro">You can reach me through any of these platforms. I'd be happy to connect and talk about projects, learning, or opportunities.</p>
-                <div class="contact-list">
-                    <div class="contact-item">
-                        <div>
-                            <strong>Email</strong>
-                            <span>Best for project or professional contact</span>
-                        </div>
-                        <a href="mailto:hemavardhanvelaga@gmail.com">hemavardhanvelaga@gmail.com</a>
+                <div class="section-heading">
+                    <div>
+                        <h1>Contact Me</h1>
+                        <p class="section-intro">Send me a message for projects, collaboration, internships, or learning opportunities. The form is now the easiest way to reach me.</p>
                     </div>
-                    <div class="contact-item">
-                        <div>
-                            <strong>Phone</strong>
-                            <span>Direct contact for quick communication</span>
+                    <span class="eyebrow">Let's Talk</span>
+                </div>
+                <div class="contact-panel">
+                    <form class="contact-form-card hover-lift" action="https://formsubmit.co/hemavardhanvelaga@gmail.com" method="POST">
+                        <input type="hidden" name="_subject" value="Portfolio Contact Form Submission">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="contact.html">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name</label>
+                                <input id="contact-name" name="name" type="text" placeholder="Enter your name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email">Email Address</label>
+                                <input id="contact-email" name="email" type="email" placeholder="Enter your email" required>
+                            </div>
                         </div>
-                        <a href="tel:9393844666">9393844666</a>
-                    </div>
-                    <div class="contact-item">
-                        <div>
-                            <strong>GitHub</strong>
-                            <span>See my code and project work</span>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-subject">Subject</label>
+                                <input id="contact-subject" name="subject" type="text" placeholder="What would you like to discuss?" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-purpose">Purpose</label>
+                                <select id="contact-purpose" name="purpose">
+                                    <option value="Project">Project</option>
+                                    <option value="Internship">Internship</option>
+                                    <option value="Collaboration">Collaboration</option>
+                                    <option value="Feedback">Feedback</option>
+                                </select>
+                            </div>
                         </div>
-                        <a href="https://github.com/HemaVadhan">github.com/HemaVadhan</a>
-                    </div>
-                    <div class="contact-item">
-                        <div>
-                            <strong>LinkedIn</strong>
-                            <span>Connect with me professionally</span>
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message" name="message" rows="6" placeholder="Write your message here..." required></textarea>
                         </div>
-                        <a href="https://www.linkedin.com/in/hema-vadhan-702082254">linkedin.com/in/hema-vadhan-702082254</a>
+                        <button class="btn" type="submit">Send Message</button>
+                        <p class="helper-text">This form sends your message directly to my email inbox.</p>
+                    </form>
+                    <div class="contact-list">
+                        <div class="contact-item">
+                            <div>
+                                <strong>Email</strong>
+                                <span>Best for project or professional contact</span>
+                            </div>
+                            <a href="mailto:hemavardhanvelaga@gmail.com">hemavardhanvelaga@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <div>
+                                <strong>Phone</strong>
+                                <span>Direct contact for quick communication</span>
+                            </div>
+                            <a href="tel:9393844666">9393844666</a>
+                        </div>
+                        <div class="contact-item">
+                            <div>
+                                <strong>GitHub</strong>
+                                <span>See my code and project work</span>
+                            </div>
+                            <a href="https://github.com/HemaVadhan" target="_blank" rel="noopener noreferrer">github.com/HemaVadhan</a>
+                        </div>
+                        <div class="contact-item">
+                            <div>
+                                <strong>LinkedIn</strong>
+                                <span>Connect with me professionally</span>
+                            </div>
+                            <a href="https://www.linkedin.com/in/hema-vadhan-velaga-999679226/" target="_blank" rel="noopener noreferrer">linkedin.com/in/hema-vadhan-velaga-999679226/</a>
+                        </div>
                     </div>
                 </div>
                 <div class="actions">

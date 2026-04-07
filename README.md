@@ -1,49 +1,70 @@
-﻿# Html CSS Project
+# Hema Vadhan Portfolio
 
-A personal portfolio website built with HTML, CSS, and JavaScript.
+A personal portfolio website built with HTML, CSS, and JavaScript to showcase profile details, education, skills, certifications, projects, experience, and contact information.
 
 ## Overview
 
-This project is a multi-page portfolio site for Hema Vadhan. It showcases profile information, education, skills, certifications, projects, and contact details in a more polished and interactive portfolio layout.
+This project is a multi-page portfolio for Velaga Hema Vadhan, a Computer Science and Information Technology graduate currently working as a DevOps Engineer. The site highlights full stack development, cloud learning, AI specialization, certifications, leadership roles, and project work in a polished and interactive layout.
 
 ## Pages
 
-- `index.html` - portfolio landing page
-- `about.html` - profile, education details, and personal background
-- `contact.html` - contact information and communication links
-- `Skills.html` - technical skills, DevOps tools, and AI learning areas
-- `Certifications.html` - credential highlights including Azure AZ-900 and TensorFlow
-- `Projects.html` - project showcase and future project goals
+- `index.html` - home page with hero section, profile summary, highlighted skills, credentials, and contact preview
+- `about.html` - professional summary, education details, profile details, and personal background
+- `contact.html` - contact form, email, phone, GitHub, and LinkedIn links
+- `Skills.html` - programming skills, full stack skills, AI specialization, cloud and tools overview
+- `Certifications.html` - certifications including TensorFlow Developer Certified, Microsoft Azure Foundations, Oracle Certified Associate, and Salesforce AI Associate
+- `Experience.html` - current DevOps Engineer role, leadership experience, and contribution highlights
+- `Projects.html` - featured projects from the resume, including full stack, MERN, and Java application work
 - `login.html` - login page
 - `signup.html` - signup page
 
 ## Features
 
-- Responsive multi-page layout
-- Shared stylesheet for consistent design
-- Modern hero sections, cards, and gallery-style blocks
-- Scroll reveal animations
+- Responsive multi-page portfolio layout
+- Shared stylesheet for a consistent design system
+- Dark mode support
+- Animated hero section and reveal effects
 - Active navigation highlighting
-- Typing-text effect on the home page
-- Interactive hover effects
-- Dedicated certifications and projects pages
-- Contact links for email, phone, GitHub, and LinkedIn
+- Typing text effect on the home page
+- Hover interactions and spotlight effects
+- Contact form integration
+- Resume download button linked to the real PDF resume
+- Dedicated pages for certifications, projects, and experience
+- Updated graduation photo gallery across the site
 
 ## Skills Highlighted
 
+- Java
+- C
+- Python
+- JavaScript
+- C++
 - HTML
 - CSS
-- JavaScript
-- React
-- Node.js
-- DevOps
-- Git
-- GitHub
-- Docker
-- CI/CD
-- AI
-- TensorFlow
-- Responsive Design
+- React JS
+- MySQL
+- Machine Learning
+- Deep Learning
+- NLP
+- AI Technologies
+- Microsoft Azure
+- AWS Cloud
+- Fusion Tool
+- Visual Studio
+- Eclipse
+
+## Certifications Highlighted
+
+- TensorFlow Developer Certified
+- Certified Microsoft Azure Foundations
+- Oracle Certified Associate
+- Salesforce AI Associate
+
+## Projects Highlighted
+
+- Digital Health Care Check-Up
+- MERN Stack Car Rental in Multiple Cities
+- Fraud Detection Application with Java
 
 ## Project Structure
 
@@ -54,9 +75,11 @@ This project is a multi-page portfolio site for Hema Vadhan. It showcases profil
 |-- contact.html
 |-- Skills.html
 |-- Certifications.html
+|-- Experience.html
 |-- Projects.html
 |-- login.html
 |-- signup.html
+|-- VELAGA_HEMA_VARDHAN_Resume.pdf
 |-- styles.css
 |-- script.js
 |-- README.md
@@ -77,7 +100,7 @@ This project is a multi-page portfolio site for Hema Vadhan. It showcases profil
 
 ## Author
 
-Hema Vadhan
+Velaga Hema Vadhan
 
 - GitHub: https://github.com/HemaVadhan
-- LinkedIn: https://www.linkedin.com/in/hema-vadhan-702082254
+- LinkedIn: https://www.linkedin.com/in/hema-vadhan-velaga-999679226/

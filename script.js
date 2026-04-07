@@ -63,6 +63,10 @@ document.querySelectorAll(".nav-link").forEach((link) => {
 
 const reveals = document.querySelectorAll(".reveal");
 
+reveals.forEach((element, index) => {
+    element.style.setProperty("--reveal-delay", `${Math.min(index * 90, 420)}ms`);
+});
+
 if ("IntersectionObserver" in window) {
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -76,6 +80,70 @@ if ("IntersectionObserver" in window) {
     reveals.forEach((element) => revealObserver.observe(element));
 } else {
     reveals.forEach((element) => element.classList.add("is-visible"));
+}
+
+const countElements = document.querySelectorAll("[data-count]");
+
+const animateCount = (element) => {
+    const target = Number(element.dataset.count);
+
+    if (!target || element.dataset.counted === "true") {
+        return;
+    }
+
+    element.dataset.counted = "true";
+    let current = 0;
+    const duration = 1200;
+    const stepTime = 30;
+    const increment = Math.max(1, Math.ceil(target / (duration / stepTime)));
+
+    const timer = setInterval(() => {
+        current = Math.min(current + increment, target);
+        element.textContent = `${current}${target === 100 ? "%" : "+"}`;
+
+        if (current >= target) {
+            clearInterval(timer);
+            element.textContent = `${target}${target === 100 ? "%" : "+"}`;
+        }
+    }, stepTime);
+};
+
+const progressFills = document.querySelectorAll("[data-progress]");
+
+const animateProgress = (element) => {
+    if (element.dataset.filled === "true") {
+        return;
+    }
+
+    element.dataset.filled = "true";
+    element.style.width = `${element.dataset.progress}%`;
+};
+
+const animatedElements = [...countElements, ...progressFills];
+
+if ("IntersectionObserver" in window) {
+    const dataObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) {
+                return;
+            }
+
+            if (entry.target.hasAttribute("data-count")) {
+                animateCount(entry.target);
+            }
+
+            if (entry.target.hasAttribute("data-progress")) {
+                animateProgress(entry.target);
+            }
+
+            dataObserver.unobserve(entry.target);
+        });
+    }, { threshold: 0.35 });
+
+    animatedElements.forEach((element) => dataObserver.observe(element));
+} else {
+    countElements.forEach(animateCount);
+    progressFills.forEach(animateProgress);
 }
 
 const typingTarget = document.querySelector("[data-typing]");
