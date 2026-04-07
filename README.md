@@ -15,8 +15,6 @@ This project is a multi-page portfolio for Velaga Hema Vadhan, a Computer Scienc
 - `Certifications.html` - certifications including TensorFlow Developer Certified, Microsoft Azure Foundations, Oracle Certified Associate, and Salesforce AI Associate
 - `Experience.html` - current DevOps Engineer role, leadership experience, and contribution highlights
 - `Projects.html` - featured projects from the resume, including full stack, MERN, and Java application work
-- `login.html` - login page
-- `signup.html` - signup page
 
 ## Features
 
@@ -77,8 +75,6 @@ This project is a multi-page portfolio for Velaga Hema Vadhan, a Computer Scienc
 |-- Certifications.html
 |-- Experience.html
 |-- Projects.html
-|-- login.html
-|-- signup.html
 |-- VELAGA_HEMA_VARDHAN_Resume.pdf
 |-- styles.css
 |-- script.js
