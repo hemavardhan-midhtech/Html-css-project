@@ -505,6 +505,40 @@ body::after {
     line-height: 1;
 }
 
+.professional-band {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.72), rgba(245, 236, 227, 0.64));
+}
+
+.professional-grid,
+.footer-grid {
+    display: grid;
+    gap: 18px;
+}
+
+.professional-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-top: 22px;
+}
+
+.professional-card {
+    border-radius: 22px;
+    padding: 22px;
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    background: rgba(255, 255, 255, 0.56);
+    box-shadow: var(--shadow);
+}
+
+.professional-card strong {
+    display: block;
+    font-size: 1.12rem;
+    margin-bottom: 8px;
+}
+
+.professional-card p {
+    margin: 0;
+    color: var(--text-soft);
+}
+
 .hero-metrics .metric-card {
     background: rgba(255, 255, 255, 0.52);
 }
@@ -1501,10 +1535,43 @@ body::after {
 .site-footer {
     width: min(1080px, calc(100% - 32px));
     margin: 24px auto 0;
-    padding: 18px 20px;
+    padding: 26px 24px 20px;
     border-radius: 24px 24px 0 0;
     background: var(--footer-bg);
     color: #ffffff;
+}
+
+.footer-grid {
+    grid-template-columns: 1.2fr 0.9fr 0.9fr;
+    align-items: start;
+}
+
+.footer-grid strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.footer-grid p {
+    margin: 0 0 8px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.site-footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus-visible {
+    text-decoration: underline;
+}
+
+.footer-note {
+    margin: 14px 0 0;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.7);
     text-align: center;
 }
 
@@ -1765,6 +1832,8 @@ body[data-theme="dark"] .hero-metrics .metric-card {
     .stack-grid,
     .gallery-grid,
     .project-grid,
+    .professional-grid,
+    .footer-grid,
     .logo-grid,
     .media-grid,
     .timeline,
